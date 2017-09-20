@@ -45,7 +45,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
      viene en Hibernate, pues la que está por defecto en los módulos no es compatible (no
      contiene la función debugf), por lo que falla al crear el SessionFactory.
      sudo cp <rutalibs>/hibernate-release-5.2.2.Final/lib/required/jboss-logging-3.3.0.Final.jar <ruta glassfish>/modules/
-     Autor: Ing. Adrián Alvarado Ramírez.
+     @author Ing. Adrián Alvarado Ramírez.
 */
 public class HibernateUtil {
 
