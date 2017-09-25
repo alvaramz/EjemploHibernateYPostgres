@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"
+                                   "-//Hibernate/Hibernate Mapping DTD 3.0//EN">
+<hibernate-mapping package="com.mudracr.hiberpostgre.db.entidades">
+    <class table="parametros" name="Parametro">
+        <id name="nombre" column="nombre" />
+        <property name="valor" column="valor" />        
+    </class>
+</hibernate-mapping>

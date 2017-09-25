@@ -29,20 +29,52 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.mudracr.hiberpostgre.main;
-
-import com.mudracr.hiberpostgre.db.HibernateUtil;
+package com.mudracr.hiberpostgre.db.entidades;
 
 /**
- * Clase principal.
+ * Entidad Parametro. Esta clase no fue creada por ingeniería inversa.
+ *
  * @author Ing. Adrián Alvarado Ramírez.
  */
-public class Main {
-    
-    public static void main(String[] args){
-        System.out.println("Iniciando el sistema HiberPostgre");
-               
-        
+public class Parametro {
+
+    private String nombre;
+    private String valor;
+
+    /**
+     * Constructor utilizado por hibernate. Pueden hacerse otros constructores
+     * para la aplicación.
+     */
+    public Parametro() {
+
     }
-    
+
+    /**
+     * @return the nombre
+     */
+    public String getNombre() {
+        return nombre;
+    }
+
+    /**
+     * @param nombre the nombre to set
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    /**
+     * @return the valor
+     */
+    public String getValor() {
+        return valor;
+    }
+
+    /**
+     * @param valor the valor to set
+     */
+    public void setValor(String valor) {
+        this.valor = valor;
+    }
+
 }

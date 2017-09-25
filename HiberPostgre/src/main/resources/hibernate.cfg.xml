@@ -5,9 +5,14 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.password">test</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://10.52.12.29:5432/base_prueba</property>
         <property name="hibernate.connection.username">prueba</property>
+        <property name="hibernate.connection.password">test</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://10.52.12.29:5432/base_prueba</property>        
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <!-- Esto es para desarrollo, en producción debe eliminarse -->
+        <property name="show_sql">true</property>
+        
+        <!--<mapping resource="com/mudracr/hiberpostgre/db/entidades/Parametro.hbm.xml"/>-->
+        <mapping resource="Parametro.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

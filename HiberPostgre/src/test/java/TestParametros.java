@@ -1,3 +1,8 @@
+
+import com.mudracr.hiberpostgre.db.HibernateUtil;
+import com.mudracr.hiberpostgre.db.entidades.Parametro;
+import org.hibernate.Session;
+
 /*
 BSD 3-Clause License
 
@@ -29,19 +34,23 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.mudracr.hiberpostgre.main;
-
-import com.mudracr.hiberpostgre.db.HibernateUtil;
 
 /**
- * Clase principal.
+ * Clase de prueba de los parámetros.
  * @author Ing. Adrián Alvarado Ramírez.
  */
-public class Main {
+public class TestParametros {
     
-    public static void main(String[] args){
-        System.out.println("Iniciando el sistema HiberPostgre");
-               
+    public static void main(String args[]){
+        Parametro parametro = new Parametro();
+        parametro.setNombre("ANO");
+        parametro.setValor("2017");
+        
+        Session sesion = HibernateUtil.getSessionFactory().openSession();
+        sesion.beginTransaction();
+        sesion.save(parametro);
+        sesion.getTransaction().commit();
+        sesion.close();
         
     }
     

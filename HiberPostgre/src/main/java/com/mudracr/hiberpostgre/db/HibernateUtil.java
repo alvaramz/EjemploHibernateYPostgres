@@ -66,6 +66,7 @@ public class HibernateUtil {
                 // de destruir este objeto, en el flujo normal es el objeto de tipo
                 // SessionFactory, pero como falló su creación, debe destruirse manualmente.
                 StandardServiceRegistryBuilder.destroy(registry);
+                System.err.println(e.toString());
             }
         }
 
