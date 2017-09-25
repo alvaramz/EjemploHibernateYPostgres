@@ -12,16 +12,11 @@
             <url>file:${project.basedir}/lib</url>
         </repository>
     </repositories>
-    <dependencies>
+    <dependencies>   
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>5.2.11.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>4.3.1.Final</version>
         </dependency>
         <dependency>
             <groupId>org.postgresql</groupId>
